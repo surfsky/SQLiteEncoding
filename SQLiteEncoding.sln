@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteEncoding", "SQLiteEncoding\SQLiteEncoding.csproj", "{1CFB973F-53CF-4C64-8C39-E49F324822EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0DEA97A3-0B79-4019-A7DC-6C3F459221D0}"
+	ProjectSection(SolutionItems) = preProject
+		README.MD = README.MD
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CFB973F-53CF-4C64-8C39-E49F324822EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFB973F-53CF-4C64-8C39-E49F324822EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFB973F-53CF-4C64-8C39-E49F324822EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFB973F-53CF-4C64-8C39-E49F324822EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F69B9B0-3AB8-4292-BB23-0C7479DED7C5}
+	EndGlobalSection
+EndGlobal
