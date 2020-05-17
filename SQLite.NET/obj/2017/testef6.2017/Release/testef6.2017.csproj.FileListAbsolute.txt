@@ -1,0 +1,2 @@
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\testef6.2017\Release\testef6.2017.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\testef6.2017\Release\testef6.2017.csproj.CoreCompileInputs.cache

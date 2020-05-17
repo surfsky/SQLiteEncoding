@@ -1,0 +1,7 @@
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Release\bin\Installer.exe.config
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Release\bin\Installer.exe
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Release\bin\Installer.pdb
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\Installer.2017\Release\Installer.2017.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\Installer.2017\Release\Installer.2017.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\Installer.2017\Release\Installer.exe
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\Installer.2017\Release\Installer.pdb

@@ -1,0 +1,8 @@
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Release\bin\northwindEF.db
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Release\bin\testlinq.exe.config
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Release\bin\testlinq.exe
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Release\bin\testlinq.pdb
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\testlinq.2017\Release\testlinq.2017.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\testlinq.2017\Release\testlinq.2017.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\testlinq.2017\Release\testlinq.exe
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\testlinq.2017\Release\testlinq.pdb

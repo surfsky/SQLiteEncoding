@@ -1,0 +1,10 @@
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Release\bin\test.exe.config
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Release\bin\test.exe
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Release\bin\test.pdb
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\test.2017\Release\test.2017.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\test.2017\Release\test.Properties.Resources.resources
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\test.2017\Release\test.TestCasesDialog.resources
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\test.2017\Release\test.2017.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\test.2017\Release\test.2017.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\test.2017\Release\test.exe
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\test.2017\Release\test.pdb

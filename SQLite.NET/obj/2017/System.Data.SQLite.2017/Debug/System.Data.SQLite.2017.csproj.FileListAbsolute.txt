@@ -1,0 +1,9 @@
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Debug\bin\System.Data.SQLite.xml
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Debug\bin\System.Data.SQLite.dll
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\bin\2017\Debug\bin\System.Data.SQLite.pdb
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\System.Data.SQLite.2017\Debug\System.Data.SQLite.2017.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\System.Data.SQLite.2017\Debug\System.Data.SQLite.Resources.SR.resources
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\System.Data.SQLite.2017\Debug\System.Data.SQLite.2017.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\System.Data.SQLite.2017\Debug\System.Data.SQLite.2017.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\System.Data.SQLite.2017\Debug\System.Data.SQLite.dll
+\\Mac\Home\Desktop\SqliteText\sqlite-netFx-source-1.0.111.0\obj\2017\System.Data.SQLite.2017\Debug\System.Data.SQLite.pdb

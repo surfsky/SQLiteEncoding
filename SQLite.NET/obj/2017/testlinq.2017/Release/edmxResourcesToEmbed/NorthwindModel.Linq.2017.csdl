@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="northwindEFModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="northwindEFEntities">
+    <EntitySet Name="Categories" EntityType="northwindEFModel.Categories" />
+    <EntitySet Name="Customers" EntityType="northwindEFModel.Customers" />
+    <EntitySet Name="Employees" EntityType="northwindEFModel.Employees" />
+    <EntitySet Name="InternationalOrders" EntityType="northwindEFModel.InternationalOrders" />
+    <EntitySet Name="OrderDetails" EntityType="northwindEFModel.OrderDetails" />
+    <EntitySet Name="Orders" EntityType="northwindEFModel.Orders" />
+    <EntitySet Name="PreviousEmployees" EntityType="northwindEFModel.PreviousEmployees" />
+    <EntitySet Name="Products" EntityType="northwindEFModel.Products" />
+    <EntitySet Name="Regions" EntityType="northwindEFModel.Regions" />
+    <EntitySet Name="Suppliers" EntityType="northwindEFModel.Suppliers" />
+    <EntitySet Name="Territories" EntityType="northwindEFModel.Territories" />
+    <AssociationSet Name="FK_Products_CategoryID_CategoryID" Association="northwindEFModel.FK_Products_CategoryID_CategoryID">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_CustomerID_CustomerID" Association="northwindEFModel.FK_Orders_CustomerID_CustomerID">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InternationalOrders_OrderID_OrderID" Association="northwindEFModel.FK_InternationalOrders_OrderID_OrderID">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="InternationalOrders" EntitySet="InternationalOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetails_OrderID_OrderID" Association="northwindEFModel.FK_OrderDetails_OrderID_OrderID">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetails_ProductID_ProductID" Association="northwindEFModel.FK_OrderDetails_ProductID_ProductID">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_SupplierID_SupplierID" Association="northwindEFModel.FK_Products_SupplierID_SupplierID">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Territories_RegionID_RegionID" Association="northwindEFModel.FK_Territories_RegionID_RegionID">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="Territories" EntitySet="Territories" />
+    </AssociationSet>
+    <AssociationSet Name="EmployeesTerritories" Association="northwindEFModel.EmployeesTerritories">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Territories" EntitySet="Territories" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int64" Nullable="false" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="Picture" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+    <NavigationProperty Name="Products" Relationship="northwindEFModel.FK_Products_CategoryID_CategoryID" FromRole="Categories" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="ContactName" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ContactTitle" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="Region" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Country" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Orders" Relationship="northwindEFModel.FK_Orders_CustomerID_CustomerID" FromRole="Customers" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int64" Nullable="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="TitleOfCourtesy" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="BirthDate" Type="DateTime" />
+    <Property Name="HireDate" Type="DateTime" />
+    <Property Name="Address" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="Region" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Country" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="HomePhone" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
+    <Property Name="Extension" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+    <Property Name="Notes" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="PhotoPath" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Territories" Relationship="northwindEFModel.EmployeesTerritories" FromRole="Employees" ToRole="Territories" />
+  </EntityType>
+  <EntityType Name="InternationalOrders">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int64" Nullable="false" />
+    <Property Name="CustomsDescription" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ExciseTax" Type="Decimal" Nullable="false" Precision="53" Scale="0" />
+    <NavigationProperty Name="Orders" Relationship="northwindEFModel.FK_InternationalOrders_OrderID_OrderID" FromRole="InternationalOrders" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="OrderDetails">
+    <Key>
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="OrderID" Type="Int64" Nullable="false" />
+    <Property Name="ProductID" Type="Int64" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="53" Scale="0" />
+    <Property Name="Quantity" Type="Int16" Nullable="false" />
+    <Property Name="Discount" Type="Single" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="northwindEFModel.FK_OrderDetails_OrderID_OrderID" FromRole="OrderDetails" ToRole="Orders" />
+    <NavigationProperty Name="Products" Relationship="northwindEFModel.FK_OrderDetails_ProductID_ProductID" FromRole="OrderDetails" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int64" Nullable="false" />
+    <Property Name="EmployeeID" Type="Int64" />
+    <Property Name="OrderDate" Type="DateTime" />
+    <Property Name="RequiredDate" Type="DateTime" />
+    <Property Name="ShippedDate" Type="DateTime" />
+    <Property Name="Freight" Type="Decimal" Precision="53" Scale="0" />
+    <Property Name="ShipName" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="ShipAddress" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="ShipCity" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="ShipRegion" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="ShipPostalCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ShipCountry" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Customers" Relationship="northwindEFModel.FK_Orders_CustomerID_CustomerID" FromRole="Orders" ToRole="Customers" />
+    <NavigationProperty Name="InternationalOrders" Relationship="northwindEFModel.FK_InternationalOrders_OrderID_OrderID" FromRole="Orders" ToRole="InternationalOrders" />
+    <NavigationProperty Name="OrderDetails" Relationship="northwindEFModel.FK_OrderDetails_OrderID_OrderID" FromRole="Orders" ToRole="OrderDetails" />
+  </EntityType>
+  <EntityType Name="PreviousEmployees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int64" Nullable="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="TitleOfCourtesy" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="BirthDate" Type="DateTime" />
+    <Property Name="HireDate" Type="DateTime" />
+    <Property Name="Address" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="Region" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Country" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="HomePhone" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
+    <Property Name="Extension" Type="String" MaxLength="4" Unicode="true" FixedLength="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+    <Property Name="Notes" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="PhotoPath" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int64" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="QuantityPerUnit" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="53" Scale="0" />
+    <Property Name="UnitsInStock" Type="Int16" />
+    <Property Name="UnitsOnOrder" Type="Int16" />
+    <Property Name="ReorderLevel" Type="Int16" />
+    <Property Name="Discontinued" Type="Boolean" Nullable="false" />
+    <Property Name="DiscontinuedDate" Type="DateTime" />
+    <NavigationProperty Name="Categories" Relationship="northwindEFModel.FK_Products_CategoryID_CategoryID" FromRole="Products" ToRole="Categories" />
+    <NavigationProperty Name="OrderDetails" Relationship="northwindEFModel.FK_OrderDetails_ProductID_ProductID" FromRole="Products" ToRole="OrderDetails" />
+    <NavigationProperty Name="Suppliers" Relationship="northwindEFModel.FK_Products_SupplierID_SupplierID" FromRole="Products" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="Regions">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Name="RegionID" Type="Int64" Nullable="false" />
+    <Property Name="RegionDescription" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Territories" Relationship="northwindEFModel.FK_Territories_RegionID_RegionID" FromRole="Regions" ToRole="Territories" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int64" Nullable="false" />
+    <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="ContactName" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ContactTitle" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="60" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="Region" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Country" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="24" Unicode="true" FixedLength="false" />
+    <Property Name="HomePage" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Products" Relationship="northwindEFModel.FK_Products_SupplierID_SupplierID" FromRole="Suppliers" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Territories">
+    <Key>
+      <PropertyRef Name="TerritoryID" />
+    </Key>
+    <Property Name="TerritoryID" Type="Int64" Nullable="false" />
+    <Property Name="TerritoryDescription" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Regions" Relationship="northwindEFModel.FK_Territories_RegionID_RegionID" FromRole="Territories" ToRole="Regions" />
+    <NavigationProperty Name="Employees" Relationship="northwindEFModel.EmployeesTerritories" FromRole="Territories" ToRole="Employees" />
+  </EntityType>
+  <Association Name="FK_Products_CategoryID_CategoryID">
+    <End Role="Categories" Type="northwindEFModel.Categories" Multiplicity="0..1" />
+    <End Role="Products" Type="northwindEFModel.Products" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Orders_CustomerID_CustomerID">
+    <End Role="Customers" Type="northwindEFModel.Customers" Multiplicity="0..1" />
+    <End Role="Orders" Type="northwindEFModel.Orders" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_InternationalOrders_OrderID_OrderID">
+    <End Role="Orders" Type="northwindEFModel.Orders" Multiplicity="1" />
+    <End Role="InternationalOrders" Type="northwindEFModel.InternationalOrders" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="InternationalOrders">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetails_OrderID_OrderID">
+    <End Role="Orders" Type="northwindEFModel.Orders" Multiplicity="1" />
+    <End Role="OrderDetails" Type="northwindEFModel.OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetails_ProductID_ProductID">
+    <End Role="Products" Type="northwindEFModel.Products" Multiplicity="1" />
+    <End Role="OrderDetails" Type="northwindEFModel.OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_SupplierID_SupplierID">
+    <End Role="Suppliers" Type="northwindEFModel.Suppliers" Multiplicity="0..1" />
+    <End Role="Products" Type="northwindEFModel.Products" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Territories_RegionID_RegionID">
+    <End Role="Regions" Type="northwindEFModel.Regions" Multiplicity="1" />
+    <End Role="Territories" Type="northwindEFModel.Territories" Multiplicity="*" />
+  </Association>
+  <Association Name="EmployeesTerritories">
+    <End Role="Employees" Type="northwindEFModel.Employees" Multiplicity="*" />
+    <End Role="Territories" Type="northwindEFModel.Territories" Multiplicity="*" />
+  </Association>
+</Schema>
