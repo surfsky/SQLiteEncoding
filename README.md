@@ -1,17 +1,12 @@
-# SQLite 字符集切换演示程序
+# System.Data.SQLite 多字符集支持
 
-![](https://github.com/surfsky/SQLiteEncoding/blob/master/snap.png?raw=true)
-- /加载 Sqlite 数据库
-- /显示所有数据库表
-- /显示数据库表数据
-- /可切换字符编码格式（修改 System.Data.SQLite 源码支持切换字符集）
-- /弄成小型数据查看工具
-
+官方提供的 System.Data.SQLite 以 utf8 进行存取，不支持多字符集。
+此项目对源码进行修改，令 System.Data.SQLite 可支持多字符集。
 
 
 # 参考代码
 ```
-SQLiteConvert.Enc = Encoding.GetEncoding("gb2312"); // 更改字符集
+SQLiteConvert.Enc = Encoding.GetEncoding("gb2312");  // 设置字符集
 using (SQLiteConnection conn = new SQLiteConnection(GetConnectionString()))
 {
     conn.Open();
@@ -35,6 +30,16 @@ using (SQLiteConnection conn = new SQLiteConnection(GetConnectionString()))
   - 更名ToUTF8() -> ToBytes()
   
 4. 选择项目System.Data.SQLite.2017, 选择Release编译
+
+
+# SQLite 字符集切换演示程序
+
+![](https://github.com/surfsky/SQLiteEncoding/blob/master/snap.png?raw=true)
+- /加载 Sqlite 数据库
+- /显示所有数据库表
+- /显示数据库表数据
+- /可切换字符编码格式（修改 System.Data.SQLite 源码支持切换字符集）
+- /弄成小型数据查看工具
 
 
 # 来由
